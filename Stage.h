@@ -9,6 +9,7 @@ class Stage : public QWidget
 {
 public:
     Stage(QWidget* parent = nullptr);
+    ~Stage();
 
 protected:
     void paintEvent(QPaintEvent *event) override;

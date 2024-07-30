@@ -7,6 +7,11 @@ Stage::Stage(QWidget* parent)
     connect(m_model, &TicTacToeModel::dataChanged, this, QOverload<>::of(&Stage::update));
 }
 
+Stage::~Stage() {
+    delete m_model;
+    delete m_controller;
+}
+
 void Stage::paintEvent(QPaintEvent *event)
 {
     QPainter painter(this);
