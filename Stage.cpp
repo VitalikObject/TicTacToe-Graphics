@@ -1,7 +1,8 @@
 #include "Stage.h"
 
 Stage::Stage(QWidget* parent)
-    : m_model(new TicTacToeModel(this))
+    : QWidget(parent)
+    , m_model(new TicTacToeModel(this))
     , m_controller(new TicTacToeController(m_model, this))
 {
     connect(m_model, &TicTacToeModel::dataChanged, this, QOverload<>::of(&Stage::update));

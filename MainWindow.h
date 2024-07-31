@@ -1,7 +1,12 @@
 #pragma once
 
 #include <QMainWindow>
-#include "Stage.h"
+
+QT_BEGIN_NAMESPACE
+namespace Ui {
+class MainWindow;
+}
+QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
 {
@@ -12,5 +17,5 @@ public:
     ~MainWindow();
 
 private:
-    Stage* m_stage;
+    Ui::MainWindow* m_ui;
 };

@@ -1,7 +1,7 @@
 #include "TicTacToeModel.h"
 
-TicTacToeModel::TicTacToeModel(QObject *parent) :
-    QObject(parent)
+TicTacToeModel::TicTacToeModel(QObject *parent)
+    : QObject(parent)
 {
     m_playerFighter = X;
     m_botFighter = O;

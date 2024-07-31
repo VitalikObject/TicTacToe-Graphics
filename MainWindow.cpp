@@ -1,13 +1,13 @@
 #include "MainWindow.h"
+#include "ui_MainWindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , m_stage(new Stage())
+    , m_ui(new Ui::MainWindow)
 {
-    setFixedSize(300, 300);
-    setCentralWidget(m_stage);
+    m_ui->setupUi(this);
 }
 
 MainWindow::~MainWindow() {
-    delete m_stage;
+    delete m_ui;
 }

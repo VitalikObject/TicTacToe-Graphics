@@ -73,3 +73,6 @@ install(TARGETS TicTacToe-Graphics
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(TicTacToe-Graphics)
 endif()
+
+set(PROJECT_SOURCES_DIR ${CMAKE_CURRENT_SOURCE_DIR})
+include_directories(${PROJECT_SOURCES_DIR})
